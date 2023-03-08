@@ -1,0 +1,19 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="text-center">Jumble a word</h1>
+        <p class="lead text-center">Please enter the word in the input box and click ADD</p>
+    </div>
+
+    <form action="/jumble" method="POST">
+        <div class="input-group">
+            <input class="form-control" name="word" placeholder="Add a word" />
+            <span class="input-group-btn">
+                <input type="submit" value="ADD" class="btn btn-success">
+            </span>
+        </div>
+    </form>
+</div>
+{% endblock %}

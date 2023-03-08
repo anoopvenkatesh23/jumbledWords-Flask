@@ -1,0 +1,23 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+My Notes
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="text-center">Jumbled Words</h1>
+        <p class="lead text-center">Make your choice</p>
+    </div>
+
+    <div class="text-center">
+        <a href="/jumble">
+            <div class="btn btn-primary"> Jumble a word </div>
+        </a>
+        <a href="/figureout">
+            <div class="btn btn-success"> Figure out words</div>
+        </a>
+    </div>
+</div>
+{% endblock %}

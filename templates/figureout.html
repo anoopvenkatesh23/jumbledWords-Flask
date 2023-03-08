@@ -1,0 +1,20 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="text-center">Figure out the words</h1>
+        <p class="lead text-center">Once you have all the boxes filled, click on Finish to see your score.</p>
+    </div>
+
+    <form action="/figureout" method="POST">
+        {% for word_doc in word_docs %}
+        <label for="{{word_doc['_id']}}">{{word_doc['word']}} :</label>
+        <input class="form-control" name="{{word_doc['_id']}}" id="{{word_doc['_id']}}" />
+        <br />
+        {% endfor %}
+        <input class="btn btn-primary" type="submit" value="Finish" />
+    </form>
+
+</div>
+{% endblock %}
